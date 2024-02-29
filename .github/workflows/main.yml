@@ -33,8 +33,8 @@ jobs:
         uses: jacobtomlinson/gha-find-replace@v3
         with:
           include: index.html
-          find: 'href="/'
-          replace: 'href="'
+          find: '/assets'
+          replace: 'assets'
           regex: false
 
   deploy:
