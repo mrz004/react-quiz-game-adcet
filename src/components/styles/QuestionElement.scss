@@ -1,0 +1,49 @@
+.question_element {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: #ecf2ff;
+  box-shadow: 0.2rem 0.2rem 1rem #86acff;
+
+  .question {
+    font-family: "PT Serif", serif;
+    font-size: 1.5em;
+    color: #544422;
+  }
+
+  .options_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    .option {
+      background-color: #b9cfff;
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      color: #544422;
+
+      &.selected {
+        background-color: #fff4d2;
+      }
+    }
+
+    @media screen and (width <= 48rem) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  button {
+    outline-color: transparent;
+    border-color: transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3em;
+    background-color: #e5d1fa;
+    cursor: pointer;
+    color: #37620b;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}

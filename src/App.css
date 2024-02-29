@@ -1,0 +1,21 @@
+#root {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "PT Serif", serif;
+  text-wrap: balance;
+}
+
+.prevent-select {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

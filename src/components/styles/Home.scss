@@ -1,0 +1,131 @@
+.home {
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(1, 50%);
+    height: 90svh;
+    background-image: url("../../assets/bg.jpg");
+    background-size: cover;
+
+    & > * {
+      grid-row: 1 / 1;
+    }
+
+    &-title {
+      grid-column: 2 / 3;
+      font-style: italic;
+      font-size: 5vw;
+      text-wrap: balance;
+      color: #eee;
+      backdrop-filter: blur(2px) saturate(0.2);
+      background-image: linear-gradient(
+        135deg,
+        hsla(275, 85%, 60%, 0.4) 0%,
+        hsla(263, 75%, 65%, 0.5) 32%,
+        hsla(256, 85%, 30%, 0.4) 100%
+      );
+      display: grid;
+      place-items: center;
+      padding-left: 1rem;
+
+      // dev : alternate color theme
+      // text-shadow: 6px 2px 5px hsl(169 83% 28% / 1);
+      // background-image: linear-gradient(135deg, #d21496cc, #51eb2eed);
+    }
+  }
+  .container {
+    margin-block: 5rem;
+    padding-inline: 1rem;
+    display: grid;
+    place-items: center;
+    $container-width: 100vmin;
+
+    &-title {
+      max-width: $container-width;
+      text-align: center;
+      font-size: 2rem;
+      text-wrap: balance;
+      background-image: linear-gradient(
+        45deg,
+        #fabc70,
+        #efc169,
+        #e2c765,
+        #d3cc64,
+        #c2d266,
+        #afd66c,
+        #99db75,
+        #80df82,
+        #61e291,
+        #2fe5a2
+      );
+      background-clip: text;
+      --webkit-background-clip: text;
+      color: rgba(0, 0, 0, 0.1);
+
+      .quoted {
+        position: relative;
+        color: rgb(150, 0, 0);
+        display: inline;
+        padding-inline: 1em;
+
+        &::before,
+        &::after {
+          position: absolute;
+          font-size: 1.5em;
+          z-index: -1;
+          color: #959595;
+        }
+
+        &::before {
+          content: "\0201C";
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          content: "\0201E";
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+
+    &-text {
+      max-width: $container-width;
+      text-align: justify;
+      margin-block-start: 3rem;
+
+      .start {
+        font-family: "PT Serif", serif;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 700;
+        display: block;
+        padding: 0.3em 0.5em;
+        border-radius: 0.5em;
+        border: 2px solid #fabc70;
+        text-align: center;
+        margin-block-start: inherit;
+        transition: box-shadow 0.5s ease;
+
+        &:hover {
+          // background-color: #efc169;
+          box-shadow: 0 1px 1rem 2px #e2c765;
+          color: #0011cc;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (width <= 49rem) {
+  .home {
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(1, 50%);
+      .hero-title {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+      }
+    }
+  }
+}

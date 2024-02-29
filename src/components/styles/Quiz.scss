@@ -1,0 +1,19 @@
+.quiz-component {
+  main:has(&) {
+    display: grid;
+    place-items: center;
+  }
+  width: 90svmin;
+
+  .view_result {
+    display: block;
+    margin-block: 2rem;
+    text-align: right;
+    text-decoration: none;
+    padding-inline: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

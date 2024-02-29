@@ -1,0 +1,36 @@
+.navbar {
+  background-color: hsl(0, 0%, 33%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+
+  a {
+    text-decoration: none;
+    color: #ddd;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+
+  .start {
+    $base-color: #145da0;
+    $hover-color: #0c2d48;
+    border-radius: 0.5em;
+    padding: 0.5rem 1rem;
+    color: #eee;
+    background-color: $base-color;
+    border: 1px solid #2e8bc0;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
