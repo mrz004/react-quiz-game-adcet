@@ -28,6 +28,14 @@ jobs:
         with:
           name: production-files
           path: ./dist
+          
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v3
+        with:
+          include: index.html
+          find: 'href="/'
+          replace: 'href="'
+          regex: false
 
   deploy:
     name: Deploy
